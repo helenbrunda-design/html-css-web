@@ -1,0 +1,157 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+:root {
+  --product-bg: #ffffff;
+  --product-border: #e5e7eb;
+  --product-radius: 16px;
+  --product-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  --product-shadow-hover: 0 18px 45px rgba(15, 23, 42, 0.18);
+  --product-text-main: #0f172a;
+  --product-text-muted: #6b7280;
+  --product-accent: #0ea5e9;
+  --product-accent-soft: rgba(14, 165, 233, 0.1);
+  --product-transition: 220ms ease;
+  --product-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.container {
+    padding: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+/* Reset rapide pour l'article */
+.product-card {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--product-font);
+}
+
+/* Carte produit */
+.product-card {
+  background: var(--product-bg);
+  border-radius: var(--product-radius);
+  border: 1px solid var(--product-border);
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--product-shadow);
+  transition:
+    transform var(--product-transition),
+    box-shadow var(--product-transition),
+    border-color var(--product-transition),
+    background-color var(--product-transition);
+}
+
+/* Effet hover moderne */
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--product-shadow-hover);
+  border-color: var(--product-accent-soft);
+}
+
+/* Header : titre + prix */
+.product-card__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.product-card__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--product-text-main);
+  letter-spacing: 0.01em;
+}
+
+.product-card__price {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--product-accent);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: var(--product-accent-soft);
+}
+
+/* Bouton afficher/cacher */
+.product-card__actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.product-card__toggle {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--product-accent);
+  background: rgba(14, 165, 233, 0.08);
+  transition:
+    background-color var(--product-transition),
+    color var(--product-transition),
+    transform var(--product-transition),
+    box-shadow var(--product-transition);
+  box-shadow: 0 0 0 rgba(14, 165, 233, 0);
+}
+
+/* Classe à ajouter/supprimer en JS quand la description est visible */
+.product-card--open .product-card__toggle::after {
+  transform: rotate(-180deg);
+}
+
+.product-card__toggle:hover {
+  background: rgba(14, 165, 233, 0.15);
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+  transform: translateY(-1px);
+}
+
+.product-card__toggle:active {
+  transform: translateY(0);
+  box-shadow: 0 0 0 1px rgba(14, 165, 233, 0.3);
+}
+
+/* Description : bloc prévu pour être togglé en JS */
+.product-card__description {
+  margin: 0;
+  padding-top: 0.4rem;
+  border-top: 1px dashed #e5e7eb;
+  color: var(--product-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* État "fermée" par défaut : tu peux gérer avec JS */
+.product-card__description.is-hidden {
+  display: none;
+}
+
+/* Responsive léger */
+@media (max-width: 480px) {
+  .product-card {
+    padding: 1rem 1.1rem 1.2rem;
+    border-radius: 14px;
+  }
+
+  .product-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-card__price {
+    align-self: flex-start;
+  }
+}

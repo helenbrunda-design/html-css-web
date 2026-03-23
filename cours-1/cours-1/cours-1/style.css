@@ -1,0 +1,119 @@
+:root {
+    --main-color: rgb(163, 1, 250);
+    --secondary-color: rgb(1, 67, 250);
+    --tertiary-color: green;
+
+    --text-xs: 14px;
+    --text-md: 16px;
+    --text-normal: 18px;
+    --text-lg: 24px;
+    --text-xl: 28px;
+    --text-xxl: 32px;
+}
+
+
+nav {
+  position: fixed;
+  background-color: antiquewhite;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--main-color);
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  color: var(--tertiary-color);
+  font-size: 32px;
+}
+
+/* .subtitle {
+    color: green;
+}
+
+#subtitle {
+    color: red;
+} */
+
+.paragraph {
+    color: var(--secondary-color);
+    font-size: 24px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-xs {
+    font-size: var(--text-xs);
+}
+
+.text-md {
+    font-size: var(--text-md);
+}
+
+.text-lg {
+    font-size: var(--text-lg);
+}
+
+.text-xl {
+    font-size: var(--text-xl);
+}
+
+.text-xxl {
+    font-size: var(--text-xxl);
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+/* 
+ID > CLASS > ELEMENT
+*/
+/* .paragraph-1, .paragraph-2, .paragraph-3, .paragraph-4 {
+  color: rgb(163, 1, 250);
+}
+.paragraph-1 {
+  font-size: 18px;
+}
+
+.paragraph-2 {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.paragraph-3 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.paragraph-4 {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.paragraph-bold {
+    font-weight: bold;
+} */

@@ -1,0 +1,136 @@
+/* Définition des propriétés par défaut pour le body */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Reset des marges des titres et des paragraphes */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/**********/
+/* Header */
+/**********/
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+}
+
+/**************/
+/* Navigation */
+/**************/
+
+.nav-container {
+  background-color: violet;
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.nav-title {
+  color: blue;
+}
+
+.links-container {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+/***************/
+/* Hero Header */
+/***************/
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  color: white;
+  height: 50vh;
+}
+
+.hero-content {
+  background-color: blueviolet;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.hero-title,
+.hero-subtitle {
+  text-align: center;
+}
+
+/********/
+/* Main */
+/********/
+
+/**********/
+/* Footer */
+/**********/
+
+/**************/
+/* Responsive */
+/**************/
+
+@media screen and (min-width: 768px) {
+  .nav-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-title {
+    font-size: 48px;
+  }
+
+  .link {
+    font-size: 24px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-title {
+    font-size: 54px;
+  }
+
+  .link {
+    font-size: 28px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .hero-subtitle {
+    font-size: 34px;
+  }
+}

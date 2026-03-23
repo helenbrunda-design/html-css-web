@@ -1,0 +1,29 @@
+body,
+h1,
+button,
+p {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+div {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}

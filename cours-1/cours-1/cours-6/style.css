@@ -1,0 +1,64 @@
+body {
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   /* justify-content: space-between; */
+   height: 100vh;
+}
+
+
+.box-parent {
+    width: 100%;
+    height: 100px;
+}
+
+.box-child {
+    width: 50%;
+    height: 75%;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.violet {
+  background-color: blueviolet;
+}
+
+.container {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 200px));
+    gap: 20px;
+    margin: 0 auto;
+}
+
+article {
+    background-color: brown;
+    max-width: 200px;
+}
+
+p {
+    margin: 0;
+}
+
+h1, h3 {
+    margin: 0;
+}
+
+footer {
+    margin-top: auto;
+}
+
